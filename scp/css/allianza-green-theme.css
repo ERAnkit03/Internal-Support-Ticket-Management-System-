@@ -1,0 +1,758 @@
+/* ============================================================
+   Allianza Infoway — Admin / Agent Panel Green Theme Override
+   Brand: #1B5E3B (deep green) | #C9A84C (gold accent)
+   Drop this file into: scp/css/allianza-green-theme.css
+   Then include it AFTER scp.css in your layout template.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap');
+
+/* ---- CSS Variables ---- */
+:root {
+  --green-900: #0b2e1a;
+  --green-800: #0f3d22;
+  --green-700: #1B5E3B;
+  --green-600: #216b44;
+  --green-500: #2a8554;
+  --green-400: #3aad70;
+  --green-300: #5ecb90;
+  --green-100: #e8f5ee;
+  --green-50:  #f2faf6;
+  --gold:      #C9A84C;
+  --gold-light:#e0c273;
+  --gold-dark: #a07c2a;
+  --text-dark: #1a2e22;
+  --text-mid:  #3d5947;
+  --border:    #c4d9cc;
+}
+
+/* ============================================================
+   BODY & BACKGROUND
+   ============================================================ */
+body, html {
+  background: #ecf3ef !important;
+  font-family: 'DM Sans', 'Lato', 'Helvetica Neue', arial, sans-serif !important;
+}
+
+/* ============================================================
+   GLOBAL LINKS
+   ============================================================ */
+a, .link {
+  color: var(--green-700) !important;
+}
+a:hover, .link:hover {
+  color: var(--green-500) !important;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+#header {
+  background: linear-gradient(135deg, var(--green-900) 0%, var(--green-700) 100%) !important;
+  border-left: none !important;
+  border-right: none !important;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.25) !important;
+  height: 76px;
+}
+
+div#header a {
+  color: var(--gold) !important;
+}
+
+#header p {
+  background: rgba(255,255,255,0.1) !important;
+  border: 1px solid rgba(255,255,255,0.2) !important;
+  color: #fff !important;
+}
+
+/* Welcome / user info text in header */
+#header .pull-right,
+#header span,
+#header .staff-name {
+  color: rgba(255,255,255,0.85) !important;
+}
+
+/* ============================================================
+   TOP NAV  (#nav)
+   ============================================================ */
+#nav {
+  background: var(--green-800) !important;
+  border-top: 1px solid var(--green-900) !important;
+  border-bottom: 2px solid var(--gold) !important;
+  border-left: none !important;
+  border-right: none !important;
+  padding-top: 0 !important;
+}
+
+#nav .active,
+#nav .inactive {
+  color: rgba(255,255,255,0.75) !important;
+  border-color: transparent !important;
+}
+
+#nav .inactive a {
+  color: rgba(255,255,255,0.75) !important;
+}
+
+#nav .active a {
+  color: var(--gold) !important;
+  font-weight: 600 !important;
+}
+
+#nav li.active,
+#nav li.inactive:hover {
+  box-shadow: 4px -3px 6px -3px rgba(0,0,0,0.4) !important;
+  border-color: var(--gold) !important;
+}
+
+#nav li.active {
+  background-color: var(--green-900) !important;
+}
+
+#nav li.inactive:hover {
+  background-color: rgba(255,255,255,0.08) !important;
+}
+
+/* Dropdown menus in nav */
+#nav li.inactive > ul {
+  background: var(--green-800) !important;
+  border: 1px solid var(--green-900) !important;
+  border-bottom: 2px solid var(--gold) !important;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3) !important;
+}
+
+#nav li.inactive > ul li {
+  border-bottom: 1px solid rgba(255,255,255,0.07) !important;
+}
+
+#nav .inactive li a {
+  color: rgba(255,255,255,0.75) !important;
+}
+
+#nav .inactive li a:hover {
+  color: var(--gold) !important;
+  background-color: rgba(255,255,255,0.08) !important;
+}
+
+/* ============================================================
+   SUB-NAV  (#sub_nav)
+   ============================================================ */
+#sub_nav {
+  background: var(--green-700) !important;
+  border-bottom: 2px solid var(--green-900) !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+
+#sub_nav > li > a,
+#customQ_nav .jb-overflowmenu-menu-primary li.item > a {
+  color: rgba(255,255,255,0.85) !important;
+}
+
+#sub_nav > li > a:hover,
+#customQ_nav .jb-overflowmenu-menu-primary li.item:hover > a {
+  color: var(--gold) !important;
+}
+
+#sub_nav a.active,
+#sub_nav li.active > a,
+#sub_nav li.child.active > a {
+  color: #fff !important;
+  font-weight: 700 !important;
+}
+
+#customQ_nav .jb-overflowmenu-menu-primary li.item:hover {
+  color: var(--gold) !important;
+  background-color: rgba(255,255,255,0.1) !important;
+  border-color: rgba(255,255,255,0.2) !important;
+}
+
+/* ============================================================
+   BREADCRUMBS
+   ============================================================ */
+#breadcrumbs {
+  background-color: var(--green-50) !important;
+  border-left: 3px solid var(--green-400) !important;
+  color: var(--text-mid) !important;
+}
+#breadcrumbs a {
+  color: var(--green-600) !important;
+}
+
+/* ============================================================
+   PAGE CONTENT AREA
+   ============================================================ */
+#container {
+  background: transparent;
+}
+
+/* ============================================================
+   TABS  (ul.tabs)
+   ============================================================ */
+ul.tabs {
+  background: var(--green-100) !important;
+  border-bottom: 1px solid var(--border) !important;
+}
+
+ul.tabs li {
+  background: rgba(255,255,255,0.5) !important;
+  border-color: var(--border) !important;
+  color: var(--text-mid) !important;
+}
+
+ul.tabs li.active {
+  background-color: #fff !important;
+  border-color: var(--border) !important;
+  border-top: 2px solid var(--green-500) !important;
+  color: var(--green-700) !important;
+}
+
+ul.tabs li a {
+  color: var(--text-mid) !important;
+}
+
+ul.tabs li.active a {
+  color: var(--green-700) !important;
+  font-weight: 600 !important;
+}
+
+ul.tabs li a:hover {
+  color: var(--green-500) !important;
+}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+input[type="button"],
+.action-button,
+.button {
+  background-color: var(--green-50) !important;
+  color: var(--green-700) !important;
+  box-shadow: 0 0 0 1px var(--green-400) inset !important;
+  border-radius: 5px !important;
+  transition: all 0.2s ease !important;
+}
+
+input[type="button"]:hover,
+.action-button:hover,
+.button:hover {
+  background-color: var(--green-100) !important;
+  box-shadow: 0 0 0 1px var(--green-500) inset !important;
+  color: var(--green-800) !important;
+}
+
+/* Primary / submit button */
+input[type="submit"],
+button[type="submit"],
+.button.primary,
+.action-button.primary {
+  background: linear-gradient(135deg, var(--green-500) 0%, var(--green-700) 100%) !important;
+  color: #fff !important;
+  box-shadow: 0 2px 8px rgba(27,94,59,0.3) !important;
+  border: none !important;
+  border-radius: 5px !important;
+}
+
+input[type="submit"]:hover,
+button[type="submit"]:hover,
+.button.primary:hover,
+.action-button.primary:hover {
+  background: linear-gradient(135deg, var(--green-400) 0%, var(--green-600) 100%) !important;
+  box-shadow: 0 4px 14px rgba(27,94,59,0.4) !important;
+}
+
+/* Dark button */
+.dark.button {
+  background: var(--green-900) !important;
+  color: #fff !important;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.3) inset !important;
+}
+.dark.button:hover {
+  background: #000 !important;
+}
+
+/* Link-style button */
+.link.button, .link.button:hover, .link.button:active {
+  color: var(--green-700) !important;
+}
+
+/* Small button */
+.btn_sm {
+  background: linear-gradient(135deg, var(--green-400) 0%, var(--green-700) 100%) !important;
+  color: #fff !important;
+}
+
+/* ============================================================
+   TABLES  (table.list)
+   ============================================================ */
+table.list {
+  background: var(--border) !important;
+}
+
+table.list caption {
+  background: var(--green-700) !important;
+  color: #fff !important;
+}
+
+table.list thead th {
+  background-color: var(--green-800) !important;
+  color: #fff !important;
+}
+
+table.list th a,
+table.list thead th a {
+  color: #fff !important;
+}
+
+table.list thead th a.asc {
+  background-color: var(--green-600) !important;
+}
+
+table.list thead th a.desc {
+  background-color: var(--green-600) !important;
+}
+
+table.list tbody td {
+  background: #fff !important;
+}
+
+table.list tbody tr:nth-child(2n+1) td {
+  background-color: var(--green-50) !important;
+}
+
+table.list tbody tr:hover td,
+table.list tbody tr.highlight td {
+  background: #fffbe8 !important;
+  color: var(--text-dark) !important;
+}
+
+table tfoot td {
+  background: var(--green-100) !important;
+}
+
+/* .table component */
+.table tr.header td,
+.table tr.header th,
+.table > thead th {
+  color: var(--text-dark) !important;
+}
+
+.table tr:not(:last-child):not(.header) {
+  border-bottom: 1px dotted var(--border) !important;
+}
+
+.table tr.header {
+  border-bottom: 1px solid var(--green-400) !important;
+}
+
+/* ============================================================
+   DASHBOARD STATS TABLE
+   ============================================================ */
+table.dashboard-stats tbody:first-child th {
+  background: var(--green-700) !important;
+  color: #fff !important;
+}
+
+table.dashboard-stats tbody:nth-child(2) th {
+  background: var(--green-100) !important;
+  color: var(--text-dark) !important;
+}
+
+table.dashboard-stats tbody:nth-child(2) tr:hover th {
+  background: var(--green-200, #d4ece0) !important;
+}
+
+/* ============================================================
+   STATUS PILLS / BADGES
+   ============================================================ */
+.label,
+span.label,
+.badge {
+  border-radius: 4px !important;
+}
+
+/* Open / active — green */
+.label.open, .status-open, .label.success {
+  background-color: var(--green-600) !important;
+  color: #fff !important;
+}
+
+/* In-progress — gold */
+.label.inprogress, .label.warning {
+  background-color: var(--gold) !important;
+  color: #fff !important;
+}
+
+/* Closed — dark */
+.label.closed, .label.default {
+  background-color: var(--green-900) !important;
+  color: #fff !important;
+}
+
+/* Generic highlight colour used through scp.css */
+.label-info, span.label:not([class*="disabled"]) {
+  background-color: var(--green-500) !important;
+}
+
+/* ============================================================
+   TICKET THREAD ENTRIES
+   ============================================================ */
+.thread-entry.message .header {
+  background: var(--green-50) !important;
+  border-left: 3px solid var(--green-400) !important;
+}
+
+.thread-entry.response .header {
+  background: #fff9e8 !important;
+  border-left: 3px solid var(--gold) !important;
+}
+
+.thread-entry.note .header {
+  background: #fffbe6 !important;
+  border-left: 3px solid var(--gold-dark) !important;
+}
+
+.thread-entry.system .header {
+  background: var(--green-100) !important;
+  border-left: 3px solid var(--green-500) !important;
+}
+
+/* ============================================================
+   FORMS & INPUTS
+   ============================================================ */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--green-500) !important;
+  box-shadow: 0 0 0 2px rgba(42,133,84,0.2) !important;
+  outline: none !important;
+}
+
+.form_table {
+  border-left: 1px solid var(--border) !important;
+  border-right: 1px solid var(--border) !important;
+}
+
+/* ============================================================
+   SEARCH BOX
+   ============================================================ */
+#query,
+input[name="query"],
+.search input[type="text"] {
+  border: 1px solid var(--border) !important;
+  border-radius: 4px 0 0 4px !important;
+}
+
+/* ============================================================
+   DROPDOWN / SELECT2
+   ============================================================ */
+.select2-container--default .select2-selection--single {
+  border-color: var(--border) !important;
+}
+
+.select2-container--default .select2-results__option--highlighted {
+  background-color: var(--green-600) !important;
+}
+
+/* ============================================================
+   SCROLLBAR (webkit)
+   ============================================================ */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--green-50);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--green-400);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--green-600);
+}
+
+/* ============================================================
+   MESSAGE / ALERT BANNERS
+   ============================================================ */
+#msg_info, .info-banner {
+  color: var(--green-800) !important;
+  border-color: var(--green-300) !important;
+  background-color: var(--green-100) !important;
+}
+
+#msg_notice, .success-banner, .notice-banner {
+  border-color: var(--green-500) !important;
+  background-color: var(--green-50) !important;
+}
+
+/* ============================================================
+   PRIORITY / OVERDUE COLOURS  (leave red/orange — just tweak)
+   ============================================================ */
+.priority_critical, .priority-critical { color: #c00 !important; }
+.priority_high,     .priority-high     { color: #d05000 !important; }
+.priority_normal,   .priority-normal   { color: var(--green-600) !important; }
+.priority_low,      .priority-low      { color: var(--text-mid) !important; }
+
+/* ============================================================
+   DIALOG / MODAL OVERLAYS
+   ============================================================ */
+.dialog .header,
+.dialog-title {
+  background: var(--green-700) !important;
+  color: #fff !important;
+}
+
+/* ============================================================
+   DASHBOARD QUICK STATS CARDS
+   ============================================================ */
+#line-chart-here {
+  border-color: var(--border) !important;
+  background: linear-gradient(180deg, var(--green-50) 0%, #ddf0e5 50%, #c8e6d4 51%, var(--green-50) 100%) !important;
+}
+
+/* ============================================================
+   FOOTER / POWERED-BY
+   ============================================================ */
+#poweredBy,
+#company {
+  color: var(--text-mid) !important;
+}
+
+#poweredBy a {
+  color: var(--green-500) !important;
+}
+
+/* ============================================================
+   MISC UTILITY OVERRIDES
+   ============================================================ */
+/* Replace the default orange E65524 accent */
+.active-tab-indicator,
+.tab-active-marker {
+  background: var(--green-400) !important;
+}
+
+/* Inline colour class used in several views */
+.color-red    { color: #c00 !important; }
+.color-green  { color: var(--green-600) !important; }
+.color-orange { color: var(--gold-dark) !important; }
+
+/* Flag icon hover */
+.icon-flag:hover { color: var(--gold) !important; }
+
+/* ============================================================
+   STRUCTURED RESPONSIVE LAYOUT
+   Sweet spot: wide enough to breathe, not stretched to extremes
+   Breakpoints: 1400 | 1200 | 960 | 768
+   ============================================================ */
+
+/* ---- Container ---- */
+#container {
+  width: 94% !important;
+  max-width: 1320px !important;
+  min-width: 760px !important;
+  margin: 0 auto 28px auto !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* ---- Header ---- */
+#header {
+  width: 100% !important;
+  height: 68px !important;
+  box-sizing: border-box !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-radius: 0 0 6px 6px !important;
+  padding: 0 20px !important;
+}
+
+#header #logo {
+  height: 56px !important;
+  padding: 6px 0 6px 0 !important;
+}
+
+#header #logo img {
+  max-height: 48px !important;
+  max-width: 200px !important;
+}
+
+#header p#info {
+  font-size: 13px !important;
+  margin: 0 !important;
+  padding: 8px 0 !important;
+  background: none !important;
+  border: none !important;
+  color: rgba(255,255,255,0.85) !important;
+  text-align: right !important;
+  line-height: 1.5 !important;
+  max-width: none !important;
+}
+
+/* ---- Top Nav ---- */
+#nav {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  border-left: none !important;
+  border-right: none !important;
+  padding: 0 20px !important;
+  height: 34px !important;
+  line-height: 34px !important;
+}
+
+#nav .active,
+#nav .inactive {
+  height: 34px !important;
+  line-height: 34px !important;
+  min-width: 100px !important;
+  font-size: 13.5px !important;
+  letter-spacing: 0.2px !important;
+}
+
+/* ---- Sub Nav ---- */
+#sub_nav {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  border-left: none !important;
+  border-right: none !important;
+  padding: 4px 20px !important;
+  height: auto !important;
+  min-height: 32px !important;
+  line-height: 24px !important;
+}
+
+/* ---- Overflow menu (queue bar) ---- */
+.jb-overflowmenu {
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* ---- Content area ---- */
+#content {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  padding: 16px 20px 20px !important;
+  background: #fff !important;
+  border-radius: 0 0 6px 6px !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07) !important;
+}
+
+/* ---- Ticket list table ---- */
+table.list {
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+table.list thead th {
+  padding: 10px 8px !important;
+  font-size: 13px !important;
+  letter-spacing: 0.3px !important;
+}
+
+table.list tbody td {
+  padding: 9px 8px !important;
+  font-size: 13.5px !important;
+  line-height: 1.4 !important;
+}
+
+/* ---- Dashboard stats ---- */
+table.dashboard-stats {
+  width: 100% !important;
+}
+
+/* ---- Tabs bar ---- */
+ul.tabs {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  padding-left: 0 !important;
+}
+
+ul.tabs li {
+  min-width: 110px !important;
+  font-size: 13px !important;
+}
+
+/* ---- Pjax container ---- */
+#pjax-container {
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* ---- Search bar ---- */
+#basic_search input,
+form.search input[type="text"] {
+  min-width: 260px !important;
+  font-size: 13.5px !important;
+}
+
+/* ---- Forms ---- */
+.form_table,
+table.form {
+  width: 100% !important;
+  max-width: 860px !important;
+}
+
+/* ============================================================
+   RESPONSIVE BREAKPOINTS
+   ============================================================ */
+
+@media (min-width: 1400px) {
+  #container {
+    max-width: 1380px !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  #container {
+    width: 96% !important;
+    max-width: 1100px !important;
+  }
+}
+
+@media (max-width: 960px) {
+  #container {
+    width: 98% !important;
+    min-width: 0 !important;
+  }
+  #nav, #sub_nav {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+  }
+  #nav .active,
+  #nav .inactive {
+    min-width: 80px !important;
+    font-size: 12.5px !important;
+  }
+  #content {
+    padding: 12px 14px 16px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  #container {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+  #header {
+    padding: 0 12px !important;
+    border-radius: 0 !important;
+  }
+  #header #logo img {
+    max-width: 140px !important;
+  }
+  #content {
+    border-radius: 0 !important;
+    padding: 10px 12px !important;
+  }
+  table.list thead th,
+  table.list tbody td {
+    font-size: 12.5px !important;
+    padding: 7px 6px !important;
+  }
+}
+
+
