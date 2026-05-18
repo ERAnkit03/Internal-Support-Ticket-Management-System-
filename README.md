@@ -1,7 +1,6 @@
 # AllianzaDesk
 
 <div align="center">
-  <img src="images/favicon.png" width="100" height="100" alt="AllianzaDesk Logo" />
 
 ### Modern Open-Source Help Desk & Ticketing System
 
